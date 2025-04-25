@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Light Theme */
+:root {
+  --color-primary: #3861fb;
+  --color-success: #16c784;
+  --color-danger: #ea3943;
+  --color-warning: #f7931a;
+  --color-text-primary: #222531;
+  --color-text-secondary: #58667e;
+  --color-text-tertiary: #808a9d;
+  --color-background: #f8fafd;
+  --color-card: #ffffff;
+  --color-border: #eff2f5;
+  --color-table-header: #f8fafd;
+  --color-table-row-hover: #f8fafd;
+  --color-table-border: #eff2f5;
+  --color-logo-fallback: #f0f0f0;
+  --color-supply-bar-bg: #eff2f5;
+  --color-header-gradient-start: #2c3e50;
+  --color-header-gradient-end: #4ca1af;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --color-primary: #3861fb;
+  --color-success: #16c784;
+  --color-danger: #ea3943;
+  --color-warning: #f7931a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a1a7bb;
+  --color-text-tertiary: #808a9d;
+  --color-background: #171924;
+  --color-card: #222531;
+  --color-border: #222531;
+  --color-table-header: #171924;
+  --color-table-row-hover: #171924;
+  --color-table-border: #222531;
+  --color-logo-fallback: #2c3e50;
+  --color-supply-bar-bg: #2c3e50;
+  --color-header-gradient-start: #0f051d;
+  --color-header-gradient-end: #341465;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+
+  /* Add subtle pattern to background */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
