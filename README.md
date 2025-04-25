@@ -136,6 +136,17 @@ Preview the production build:
 npm run preview
 ```
 
+## 🚀 Deployment
+
+This application can be easily deployed to Netlify. See the [DEPLOY.md](DEPLOY.md) file for detailed instructions.
+
+### Quick Deployment Steps
+
+1. Create a Netlify account at [netlify.com](https://www.netlify.com/)
+2. Build your application: `npm run build`
+3. Drag and drop the `dist` folder to Netlify's upload area
+4. Your application will be live in seconds!
+
 ## 🔍 Implementation Details
 
 - **Real-time Updates**: The application connects to Binance WebSocket API to receive live market data.
