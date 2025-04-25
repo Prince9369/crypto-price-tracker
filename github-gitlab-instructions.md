@@ -16,7 +16,7 @@ Follow these steps to push your project to GitHub or GitLab.
 2. Push your local repository to GitHub:
    ```bash
    # Add the remote repository
-   git remote add origin https://github.com/yourusername/crypto-price-tracker.git
+   git remote add origin https://github.com/Prince9369/crypto-price-tracker.git
 
    # Push your code
    git push -u origin main
