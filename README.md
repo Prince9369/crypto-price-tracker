@@ -96,7 +96,7 @@ src/
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/crypto-price-tracker.git
+   git clone https://github.com/Prince9369/crypto-price-tracker.git
    cd crypto-price-tracker
    ```
 
