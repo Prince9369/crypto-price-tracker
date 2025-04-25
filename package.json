@@ -1,7 +1,8 @@
 {
-  "name": "xivtech",
+  "name": "crypto-price-tracker",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "homepage": "https://Prince9369.github.io/crypto-price-tracker",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +11,9 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
