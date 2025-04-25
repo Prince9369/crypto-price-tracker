@@ -39,18 +39,33 @@ export const cryptoSlice = createSlice({
 
     // Fallback to mock data with simulated updates
     updateMockData: (state) => {
-      state.cryptos = state.cryptos.map(crypto => {
-        // Generate random percentage changes
-        const hourChange = parseFloat((Math.random() * 10 - 5).toFixed(2));
-        const dayChange = parseFloat((Math.random() * 20 - 10).toFixed(2));
-        const weekChange = parseFloat((Math.random() * 30 - 15).toFixed(2));
+      state.cryptos = state.cryptos.map((crypto, index) => {
+        // Force alternating positive and negative changes based on crypto ID
+        // This ensures we always have a mix of green and red in the UI
+        const isOdd = index % 2 === 1;
+
+        // For odd-indexed cryptos (like ETH, XRP), force negative changes
+        // For even-indexed cryptos (like BTC, BNB), force positive changes
+        const hourChange = isOdd
+          ? parseFloat((-2 - Math.random() * 3).toFixed(2)) // Negative: -2 to -5
+          : parseFloat((2 + Math.random() * 3).toFixed(2));  // Positive: 2 to 5
+
+        const dayChange = isOdd
+          ? parseFloat((-5 - Math.random() * 5).toFixed(2)) // Negative: -5 to -10
+          : parseFloat((5 + Math.random() * 5).toFixed(2));  // Positive: 5 to 10
+
+        const weekChange = isOdd
+          ? parseFloat((-8 - Math.random() * 7).toFixed(2)) // Negative: -8 to -15
+          : parseFloat((8 + Math.random() * 7).toFixed(2));  // Positive: 8 to 15
 
         // Calculate new price based on hourly change
         const change = crypto.price * (hourChange / 100);
         const newPrice = crypto.price + change;
 
         // Update volume with random change
-        const volumeChange = parseFloat((Math.random() * 16 - 8).toFixed(2));
+        const volumeChange = isOdd
+          ? parseFloat((-3 - Math.random() * 5).toFixed(2)) // Negative: -3 to -8
+          : parseFloat((3 + Math.random() * 5).toFixed(2));  // Positive: 3 to 8
         const newVolume = crypto.volume24h * (1 + volumeChange / 100);
 
         return {

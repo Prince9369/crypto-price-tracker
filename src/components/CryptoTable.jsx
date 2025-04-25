@@ -338,16 +338,24 @@ const PriceCell = styled.td`
 `;
 
 const PercentageCell = styled.td`
+  /* Use the $change prop to determine color (green for positive, red for negative) */
   color: ${(props) => (props.$change >= 0 ? 'var(--color-success)' : 'var(--color-danger)')};
-  font-weight: 500;
+  font-weight: 600; /* Make it more visible */
   display: flex;
   align-items: center;
   gap: 4px;
+
+  /* Add a subtle background to make the color more obvious */
+  background-color: ${props => props.$change >= 0 ? 'rgba(22, 199, 132, 0.1)' : 'rgba(234, 57, 67, 0.1)'};
+  border-radius: 4px;
+  padding: 4px 8px;
 `;
 
 const ChangeIndicator = styled.span`
-  font-size: 10px;
+  font-size: 12px; /* Make it more visible */
+  /* Use the $change prop to determine color (green for positive, red for negative) */
   color: ${(props) => (props.$change >= 0 ? 'var(--color-success)' : 'var(--color-danger)')};
+  font-weight: bold;
 `;
 
 const VolumeCell = styled.td`
