@@ -1,14 +1,14 @@
 # Real-Time Crypto Price Tracker
 
-![Crypto Tracker Demo](demo.gif)
+![Crypto Tracker Demo]()
 
 A responsive React + Redux Toolkit application that tracks real-time cryptocurrency prices using Binance WebSocket API, with all state managed via Redux.
 
 ## 🎮 Live Demo
 
-Check out the live demo: [Crypto Price Tracker Demo](https://your-demo-url-here.com)
+Check out the live demo: [Crypto Price Tracker Demo](https://gorgeous-llama-aaa288.netlify.app/ )
 
-> **Note:** You can also view a video walkthrough of the application [here](https://your-video-url-here.com).
+> **Note:** You can also view a video walkthrough of the application [here](https://www.loom.com/share/5c94a2918a29446babe25c30a21d956d?sid=68893af1-c096-400e-af11-1f8a8f97a88f).
 
 ## 🚀 Features
 
